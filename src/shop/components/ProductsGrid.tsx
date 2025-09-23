@@ -2,7 +2,7 @@ import { Button } from '@/components';
 import type { Product } from '@/mocks/products.mock';
 import { Filter, Grid, List } from 'lucide-react';
 import { ProductCard } from './ProductCard';
-import { FilterSidebar } from './filterSidebar';
+import { FilterSidebar } from './FilterSidebar';
 import { useSearchParams } from 'react-router';
 import { useState } from 'react';
 
