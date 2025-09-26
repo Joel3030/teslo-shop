@@ -1,0 +1,65 @@
+import {
+  Download,
+  FileText,
+  Plus,
+  Settings,
+  Upload,
+  UserPlus,
+} from 'lucide-react';
+
+export const QuickActions = () => {
+  const actions = [
+    {
+      icon: Plus,
+      label: 'New Project',
+      color: 'bg-blue-500 hover:bg-blue-600',
+    },
+    {
+      icon: UserPlus,
+      label: 'Add User',
+      color: 'bg-green-500 hover:bg-green-600',
+    },
+    {
+      icon: FileText,
+      label: 'Generate Report',
+      color: 'bg-purple-500 hover:bg-purple-600',
+    },
+    {
+      icon: Download,
+      label: 'Export Data',
+      color: 'bg-orange-500 hover:bg-orange-600',
+    },
+    {
+      icon: Upload,
+      label: 'Import Data',
+      color: 'bg-teal-500 hover:bg-teal-600',
+    },
+    {
+      icon: Settings,
+      label: 'Settings',
+      color: 'bg-gray-500 hover:bg-gray-600',
+    },
+  ];
+
+  return (
+    <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+      <h3 className="mb-4 text-lg font-semibold text-gray-900">
+        Quick Actions
+      </h3>
+      <div className="grid grid-cols-2 gap-3">
+        {actions.map((action, index) => {
+          const Icon = action.icon;
+          return (
+            <button
+              key={index}
+              className={`flex items-center space-x-3 rounded-lg p-3 text-white transition-colors ${action.color}`}
+            >
+              <Icon size={18} />
+              <span className="text-sm font-medium">{action.label}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+};

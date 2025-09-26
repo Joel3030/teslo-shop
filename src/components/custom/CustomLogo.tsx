@@ -1,10 +1,10 @@
 import { Link } from 'react-router';
 
 interface Props {
-  subTitle?: string;
+  subtitle?: string;
 }
 
-export const CustomLogo = ({ subTitle }: Props) => {
+export const CustomLogo = ({ subtitle }: Props) => {
   return (
     <>
       <Link to="/" className="flex items-center whitespace-nowrap">
@@ -12,7 +12,7 @@ export const CustomLogo = ({ subTitle }: Props) => {
           Teslo |
         </span>
         <p className="text-muted-foreground m-0 px-2 whitespace-nowrap">
-          {subTitle || 'Shop'}
+          {subtitle || 'Shop'}
         </p>
       </Link>
     </>
